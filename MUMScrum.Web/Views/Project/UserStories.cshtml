@@ -1,0 +1,52 @@
+﻿@model MUMScrum.Model.Model.Project
+
+@{
+    ViewBag.Title = "Details";
+}
+<h3 class="page-title">
+    Details @Model.Name
+</h3>
+<h4>Project</h4>
+<div class="row"> 
+       @if (Model.userStoryList.Count == 0)
+       {
+        <h3>User Stories Not Found.</h3>
+        @Html.ActionLink("Create", "Create", "UserStory")
+       }
+        <hr />
+        @foreach (var item in Model.userStoryList)
+        {
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat blue-madison">
+                    <div class="visual">
+                        <i class="fa fa-comments"></i>
+                    </div>
+                    <div class="details" >
+                        <div  class="desc">
+                            @item.Name
+                        </div>
+                        <div class="desc">
+                            @item.Description
+                        </div>
+                        <div style="font-size:small; color:burlywood; float:right">
+                            (@item.Status)
+                        </div>
+                        @*<div>
+                                1349
+                            </div>
+                            <div class="desc">
+                                New Feedbacks
+                            </div>*@
+                    </div>
+                    <a class="more" href="/UserStory/Edit/@item.Id">
+                        Edit <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+        }
+
+
+           
+</div>
+    @Html.ActionLink("Back to List", "Index")
+</p>

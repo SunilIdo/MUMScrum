@@ -1,0 +1,66 @@
+﻿@model MUMScrum.Model.ViewModel.EmployeeEffortEstimation
+@using MUMScrum.Model.ENUMS;
+@{
+    ViewBag.Title = "DeveloperEstimateEffort";
+}
+
+@if (Model.EstimateType == EmployeeEstimateENUM.DevEstimate || Model.EstimateType == EmployeeEstimateENUM.TesterEstimate)
+{
+    <h2>Estimate Effort</h2>
+}
+else
+{
+    <h2>Completed Effort</h2>
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.HiddenFor(m => m.EmployeeId)
+        @Html.HiddenFor(m=>m.EstimateType)
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.Label("User Story: ", htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-8">
+                @Html.Label(@Model.userStory.Name, new { @class = "control-label" })
+                @*@Html.EditorFor(model => model.EmployeeId, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.EmployeeId, "", new { @class = "text-danger" })*@
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Assigned to", htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-8">
+                @Html.Label(@Model.employee.Name, new { @class = "control-label" })
+            </div>
+        </div>
+        <div class="form-group">
+            @if (Model.EstimateType == EmployeeEstimateENUM.DevEstimate || Model.EstimateType == EmployeeEstimateENUM.TesterEstimate)
+            {
+                @Html.Label("Estimated Effort (in hours)", htmlAttributes: new { @class = "control-label col-md-3" })
+            }
+            else
+            {
+                @Html.Label("Competed work (in percentage)", htmlAttributes: new { @class = "control-label col-md-3" })
+            }
+            
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.Effort, new { style = "width:500px;", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Effort, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-3 col-md-10">
+                <input type="submit" value="Update" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

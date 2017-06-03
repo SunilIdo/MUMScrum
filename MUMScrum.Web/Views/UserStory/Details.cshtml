@@ -1,0 +1,105 @@
+﻿@model MUMScrum.Model.Model.UserStory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserStory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.project.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.project.Name)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Developer.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Developer.Name)
+        </dd>*@
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.ReleaseBacklog.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseBacklog.Name)
+        </dd>*@
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Sprint.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sprint.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tester.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tester.Name)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserStoryType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserStoryType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.DeveloperEstimate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeveloperEstimate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TesterEstimate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TesterEstimate)
+        </dd>*@
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

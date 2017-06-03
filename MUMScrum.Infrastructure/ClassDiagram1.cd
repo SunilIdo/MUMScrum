@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MUMScrum.Infrastructure.Core.DatabaseFactory" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Core\DatabaseFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MUMScrum.Infrastructure.Core.Disposable" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Disposable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MUMScrum.Infrastructure.Core.LinqExtensions" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAACAQAAAAAAAAAAAAAAAAAAAAAgAAAIAAEA=</HashCode>
+      <FileName>Core\LinqExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUMScrum.Infrastructure.Core.PagedResult&lt;T&gt;" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAACAAAAAAAAAAAEAAAAgI=</HashCode>
+      <FileName>Core\PagedResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUMScrum.Infrastructure.Core.RepositoryBase&lt;T&gt;" BaseTypeListCollapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAYABIAAAAAAAghgAAAAQAAAAAEAQAAAEgAQAAAAAIA=</HashCode>
+      <FileName>Core\RepositoryBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MUMScrum.Infrastructure.Core.UnitOfWork" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAEAAAAAAAAAAAAIAAAAAAAEAAAAAAAAAAIAAACA=</HashCode>
+      <FileName>Core\UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DTHManagementSystem.Infrastructure.IncludeHelper" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\IncludeHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MUMScrum.Infrastructure.Core.IDatabaseFactory" Collapsed="true">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\IDatabaseFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUMScrum.Infrastructure.Core.IRepository&lt;T&gt;" Collapsed="true">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYABIAAAAAAAAhgAAAAQAAAAAEAAAAAEgAQAAAAAIA=</HashCode>
+      <FileName>Core\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUMScrum.Infrastructure.Core.IUnitOfWork" Collapsed="true">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Core\IUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

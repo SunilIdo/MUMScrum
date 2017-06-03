@@ -1,0 +1,38 @@
+﻿@model MUMScrum.Model.ViewModel.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+    <link href="../../assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/Content/login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "form-horizontal  form-signin" }))
+        {
+            @Html.AntiForgeryToken()
+            @*<div >
+                <span class="text-right alert-danger">@ViewBag.ErrorMessage</span>
+            </div>*@
+            @Html.ValidationSummary(true)
+            <h2 class="form-signin-heading">MUMScrum login</h2>
+            <hr />
+            <input type="text" class="form-control" name="UserName" placeholder="UserName" required="" autofocus="" />
+            <br />
+            <input type="password" class="form-control" name="Password" placeholder="Password" required="" />
+            <br/>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        }
+    </div>
+</body>
+</html>
